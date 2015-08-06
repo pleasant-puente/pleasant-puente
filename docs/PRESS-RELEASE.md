@@ -17,28 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Roommate task organizer
+  > Roommate Collaboration Application
 
 ## Sub-Heading ##
-  > Get along with your roommates
+  > Cohabitation made easier
 
 ## Summary ##
-  > Delineate and communicate tasks including chores and expenses automatically.
+  > Manage household tasks with your roommates
 
 ## Problem ##
-  > Communication and organization of tasks among different people is difficult.
+  > Communication, organization and accountability between roommates with busy schedules is challenging.
 
 ## Solution ##
-  > Automates the blame game
+  > Effectively manages communication, tasks and expenditures between roommates.
 
 ## Quote from You ##
-  > Its cool
+  > "Let the app have the hard talk."
 
 ## How to Get Started ##
-  > go to the provided url
+  > Create a 'house' account and invite your roommates to join
 
 ## Customer Quote ##
-  > ""-someone
+  > "Using this app has made our lives soooooo much better! Now the trash is always taken out."-Sally
 
 ## Closing and Call to Action ##
-  > the url
+  > Click here to register your house.

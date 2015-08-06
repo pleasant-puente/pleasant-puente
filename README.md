@@ -1,6 +1,6 @@
-# Space Kitten
+# Pleasant Puente
 
-> Pithy project description
+> your Home Page
 
 ## Team
 
