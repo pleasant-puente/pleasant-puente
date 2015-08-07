@@ -1,8 +1,11 @@
 <div id='newUser'>
   <h1>newUser</h1>
-  <form name="newUserForm" ng-submit='newUser()'>
-    <input type='text' ng-model='user.username'>
-    <input type="password" ng-model='user.password'>
+  <form name="newUserForm" ng-submit='addUser()'>
+    <input type='text' ng-model='email' placeholder='email'>
+    <input type="password" ng-model='password' placeholder='password'>
+    <input type='text' ng-model='firstname' placeholder='firstname'>
+    <input type='text' ng-model='lastname' placeholder='lastname'>
+    <input type='text' ng-model='houseId' placeholder='House ID, if you have one'>
     <button>new user</button>
   </form>
   <a href="#/login">Already have an account? <strong>Signin</strong> ...</a>
