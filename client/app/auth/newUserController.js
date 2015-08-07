@@ -1,6 +1,20 @@
-angular.module('homeHarmony')
-  .controller('NewUserCtrl', function() {
-    var login = this;
+angular.module('homeHarmony.newUser', ['firebase'])
 
-    login.title = "new user";
-  });
+.controller('NewUserCtrl', function ($scope, $location, $firebaseObject) {
+
+  var db = new Firebase("https://dazzling-inferno-3592.firebaseio.com");
+
+  $scope.addUser = function(){
+
+    var userObj = {
+      firstname: $scope.firstname,
+      lastname: $scope.lastname,
+      email: $scope.email  //unique
+      // dateJoined: new Date()
+      // house: houseId
+    };
+    console.log(userObj);
+    db.child('users').push(userObj);
+  };
+
+});

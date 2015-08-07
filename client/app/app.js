@@ -1,4 +1,4 @@
-angular.module('homeHarmony', ['ui.router'])
+angular.module('homeHarmony', ['ui.router', 'homeHarmony.newUser'])
 .config(function($stateProvider, $urlRouterProvider) {
   // Set up the states
   $stateProvider
@@ -16,7 +16,7 @@ angular.module('homeHarmony', ['ui.router'])
       }*/
     })
     .state('newUser', {
-      url: "/newuser",
+      url: "/newUser",
       templateUrl: "./app/auth/newUser.html",
       controller: 'NewUserCtrl',
       controllerAs: 'newUser'
