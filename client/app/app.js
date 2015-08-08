@@ -33,6 +33,24 @@ angular.module('homeHarmony', [
       });
     })
      */
+     // start of changes 
+    .state('dash', {
+      url: "/dash",
+      templateUrl: "app/dash/dash.html",
+      // controller: "dashCtrl"
+    })
+    // nested views for dash
+    .state('dash.default', {
+      url: "/:default",
+      templateUrl: "app/dash/partials/default.html",
+      // controller: "defaultCtrl"
+    })
+    .state('dash.newHouse', {
+      url: "/:newHouse",
+      templateUrl: "app/dash/partials/newHouse.html",
+      // controller: "newHouseCtrl"
+    })
+
   // For any unmatched url, redirect to /
-  $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise("/dash");
 });
