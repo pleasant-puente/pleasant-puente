@@ -149,6 +149,11 @@ a {
   margin:10px;
 }
 
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+
 /*
 [progress] will be uncommented when users are formatted in dash.html
 
