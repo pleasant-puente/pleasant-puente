@@ -1,9 +1,28 @@
-<div id='login'>
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a ui-sref="login">Login User</a></li>
+        <li><a ui-sref="newUser">New User</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div>
   <h1>login</h1>
   <form name="loginForm" ng-submit='logInUser()'>
-    <input type='text'ng-model='email'>
-    <input type="password" ng-model='password'>
+  <!-- todo: add blur so can validate on focus lost-->
+    <input type='email' name="userEmail" ng-model='email' placeholder='user@domain.com' required>
+    <div role="alert">
+      <span class="error" ng-show="loginForm.userEmail.$error.required">
+        Please enter your e-mail address</span>
+      <span class="error" ng-show="myForm.userEmail.$error.email">
+        That is not a valid email</span>
+    </div>
+    <input type="password" ng-model='password' placeholder='password' required>
     <button>login</button>
   </form>
-  <a href="#/newuser">Don't have an account? <strong>Signup</strong> ...</a>
+  <a href="#/newUser">Don't have an account? <strong>Signup</strong> ...</a>
 </div>

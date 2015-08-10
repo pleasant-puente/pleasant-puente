@@ -1,4 +1,4 @@
-angular.module('homeHarmony')
+angular.module('homeHarmony.auth',[])
 .factory("Auth", ["$firebaseAuth",
   function($firebaseAuth) {
     var ref = new Firebase("https://dazzling-inferno-3592.firebaseio.com");
@@ -23,6 +23,7 @@ angular.module('homeHarmony')
           });
         }).then(function(authData){
           console.log("Logged in as:",authData.uid);
+          // $state.go('dash');
         }).catch(function(error){
           console.error("Error:",error);
         });
@@ -33,6 +34,7 @@ angular.module('homeHarmony')
           password : attemptedPassword
         }).then(function(authData){
           console.log("Logged in as: ",authData.uid);
+          // $state.go('dash');
         }).catch(function(error){
           console.error("Error:",error);
         });

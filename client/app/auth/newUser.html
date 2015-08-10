@@ -1,10 +1,27 @@
-<div id='newUser'>
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a ui-sref="login">Login User</a></li>
+        <li><a ui-sref="newUser">New User</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div>
   <h1>newUser</h1>
   <form name="newUserForm" ng-submit='addUser()'>
-    <input type='text' ng-model='email' placeholder='email'>
-    <input type="password" ng-model='password' placeholder='password'>
-    <input type='text' ng-model='firstname' placeholder='firstname'>
-    <input type='text' ng-model='lastname' placeholder='lastname'>
+    <input type='email' name="userEmail" ng-model='email' placeholder='user@domain.com' required>
+    <div role="alert">
+      <span class="error" ng-show="loginForm.userEmail.$error.required">
+        Please enter your e-mail address</span>
+      <span class="error" ng-show="myForm.userEmail.$error.email">
+        That is not a valid email</span>
+    </div>
+    <input type="password" ng-model='password' placeholder='password' required>
+    <input type='text' ng-model='firstname' placeholder='firstname' required>
+    <input type='text' ng-model='lastname' placeholder='lastname' required>
     <input type='text' ng-model='houseId' placeholder='House ID, if you have one'>
     <button>new user</button>
   </form>
