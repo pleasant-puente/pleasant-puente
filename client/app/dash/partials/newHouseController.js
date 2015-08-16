@@ -51,10 +51,10 @@ angular.module('homeHarmony.newHouse', ['firebase'])
     $('#newEmail2').val('');
 
     // create a list of house members
+    var houseMembersObj = {};
     var houseMembers = [
       currentUser,
-      $scope.email1,
-      $scope.email2
+      $scope.email
     ];
     // add member list to new house object
     var houseObj = {
@@ -63,7 +63,7 @@ angular.module('homeHarmony.newHouse', ['firebase'])
     // add house to database
     db.child('houses').push(houseObj);
 
-    
+
     db.child('houses').once('child_added', function(snapshot) {
       currentHouseId = snapshot.key();
       localStorage.setItem("currentHouseId", currentHouseId);
@@ -76,6 +76,14 @@ angular.module('homeHarmony.newHouse', ['firebase'])
         'house': currentHouseId
       });
       console.log(currentHouseId, 'currentHouse')
+
+      for (var userId in userDb){
+        if (userDb[userId].house === currentHouseId){  // index house later
+          houseMembersObj[userId] = userDb[userId2].firstname + " " + userDb[userId2].lastname[0] + ".";
+        }
+      }
+      localStorage.setItem("currentMembersObj", JSON.stringify(houseMembersObj));
+
       $state.go('dash.default');
     })
 

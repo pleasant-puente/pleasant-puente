@@ -11,7 +11,13 @@ angular.module('homeHarmony.tasks', ['firebase', 'ngMessages'])
   $scope.tasks.currentDate = new Date();
 
   // Populates select element on tasks form with house member names
-  $scope.houseMemberArr = JSON.parse(localStorage.getItem('currentUsersArr'))
+  var houseMemberObj = JSON.parse(localStorage.getItem('currentMembersObj'));
+  var houseMemberArr = [];
+  for (var memberIDs in houseMemberObj){
+    houseMemberArr.push(houseMemberObj[memberIDs])
+  }
+  $scope.houseMemberArr = houseMemberArr.slice();
+
   currentHouseId = localStorage.getItem('currentHouseId');
   currentUserId = localStorage.getItem("currentUserId");
 
@@ -23,7 +29,7 @@ angular.module('homeHarmony.tasks', ['firebase', 'ngMessages'])
       doer: $scope.newTaskDoer,
       dueDate: (due.getMonth() + 1) + '/' + due.getDate() + '/' +  due.getFullYear(),
       dateCreated: (now.getMonth() + 1) + '/' + now.getDate() + '/' +  now.getFullYear(),
-      // A task is completed when the user checks its checkbox 
+      // A task is completed when the user checks its checkbox
       completed: false,
       repeating: -1
     }
@@ -86,9 +92,8 @@ angular.module('homeHarmony.tasks', ['firebase', 'ngMessages'])
       var sortedArr = arr.sort(function(a, b) { return Date.parse(a.dueDate) > Date.parse(b.dueDate) });
       return $scope.tasks.parseDate(sortedArr);
     } else {
-      return arr[0];
+      return $scope.tasks.parseDate(arr);
     }
-    return $scope.tasks.parseDate(arr);
   }
 
   $scope.tasks.checkTask = function(task) {
