@@ -11,10 +11,10 @@ angular.module('homeHarmony.default', ['firebase'])
   currentHouseId = localStorage.getItem('currentHouseId');
   currentUserId = localStorage.getItem("currentUserId");
   // Capitalizes users first name which is displayed on dash
-  $scope.currentUserName = localStorage.getItem("currentUserName").charAt(0).toUpperCase() + 
+  $scope.currentUserName = localStorage.getItem("currentUserName").charAt(0).toUpperCase() +
     localStorage.getItem("currentUserName").slice(1);
 
-  
+
   $scope.currentDate = new Date();
 
   // Initialize variables
@@ -28,14 +28,14 @@ angular.module('homeHarmony.default', ['firebase'])
     issuesArr = [];
     usersArr = [];
     tasksArr = [];
-    // Retrieve data from the database for the current house
-    expensesDb = snapshot.val().houses[currentHouseId].expenses;
-    issuesDb = snapshot.val().houses[currentHouseId].issues;
-    usersDb = snapshot.val().houses[currentHouseId].houseMembers;
-    tasksDb = snapshot.val().houses[currentHouseId].tasks;
 
-    // Build expensesArr so we can graph the expenses
-    for (var expense in expensesDb) {
+    houseDb = snapshot.val().houses[currentHouseId];
+    expensesDb = houseDb.expenses;
+    issuesDb = houseDb.issues;
+    usersDb = houseDb.houseMembers;
+    tasksDb = houseDb.tasks;
+
+    for (var expense in expensesDb){
       dataObj = {};
       dataObj.name = expensesDb[expense].expenseName;
       dataObj.y = expensesDb[expense].cost;
@@ -69,7 +69,7 @@ angular.module('homeHarmony.default', ['firebase'])
     $q.all(usersArr).then(function() {
       // Place on scope to be displayed
       $scope.usersArr = usersArr;
-      localStorage.setItem("currentUsersArr", JSON.stringify(usersArr));
+      // localStorage.setItem("currentUsersArr", JSON.stringify(usersArr));
     });
     // See how many tasks are not yet completed
     for (var task in tasksDb) {
