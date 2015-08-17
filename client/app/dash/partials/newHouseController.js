@@ -53,7 +53,7 @@ angular.module('homeHarmony.newHouse', ['firebase'])
     // create a list of house members
     var houseMembers = [
       currentUser,
-      $scope.email1
+      $scope.email
     ];
     // add member list to new house object
     var houseObj = {
