@@ -18,7 +18,7 @@
             <!-- Only show the tasks that are not completed -->
             <li ng-repeat="task in tasksArr | limitTo:5" ng-if="!task.completed">
               <img src="assets/list.png" class="list-icon" alt="task icon">
-              <span>{{task.dueDate}} - {{task.description}}</span>
+              <span>{{task.doer}}: {{task.description}} - {{task.dueDate}}</span>
             </li>
           </ul>
         </span>
@@ -81,7 +81,7 @@
         </div>
 
       </div>
-    </section>  
+    </section>
   </div>
   <div>
   </div>

@@ -1,4 +1,4 @@
-/* browser reset default styles */ 
+/* browser reset default styles */
 
 html {
 	color: #000;
@@ -63,7 +63,7 @@ textarea {
 }
 
 /* Typography */
- 
+
 a {
   text-decoration: none;
   color:#000;
@@ -74,7 +74,7 @@ li {
 }
 
 h1, h2, h3, h4, h5, h6 {
- font-family: 'Open Sans Condensed', sans-serif; 
+ font-family: 'Open Sans Condensed', sans-serif;
  font-weight: 300;
 }
 
@@ -89,7 +89,7 @@ h1 {
   text-align: left;
 }
 
-/* Forms */ 
+/* Forms */
 
 .hh-form-overlay {
   margin-top: 60px;
@@ -167,7 +167,11 @@ h1 {
   color:red;
 }
 
-/* icons */ 
+.login-form-error {
+  color:#000;
+}
+
+/* icons */
 
 .chart {
 	width:70%;
@@ -185,7 +189,7 @@ h1 {
   height:50px;
 }
 
-/* dashboard */ 
+/* dashboard */
 
 .hh-dashboard-container {
   background-color: #CBD2D4;
@@ -215,7 +219,7 @@ h1 {
   margin: 20px auto;
 }
 
-.joinHouse, 
+.joinHouse,
 .newHouse {
   display: inline-block;
   vertical-align: top;
@@ -229,8 +233,8 @@ h1 {
 }
 
 .newHouse p {
-  font-style:italic; 
-  font-size:13px; 
+  font-style:italic;
+  font-size:13px;
   color:gray;
   margin:20px auto
 }
@@ -275,7 +279,7 @@ h1 {
 	margin:10px auto;
 }
 
-/* footer */ 
+/* footer */
 
 .footer {
   display: flex;
@@ -405,7 +409,7 @@ input[type=checkbox] {
   overflow:auto;
 }
 
-/* helper classes */ 
+/* helper classes */
 
 .center-content {
   text-align: center;
@@ -418,7 +422,7 @@ input[type=checkbox] {
 /* Landing styling */
 
 .landing {
-  
+
   height: 100%;
   color: white;
   text-align: center;
@@ -464,7 +468,7 @@ input[type=checkbox] {
 .layout-transparent .mdl-layout__header,
 .layout-transparent .mdl-layout__drawer-button {
   /* This background is dark, so we set text to white. Use 87% black instead if
-     your background is light. */ 
+     your background is light. */
   color: white;
 }
 
