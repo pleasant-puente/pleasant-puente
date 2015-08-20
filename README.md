@@ -50,4 +50,4 @@ View the project roadmap [here](https://github.com/pleasant-puente/pleasant-puen
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/unexpected-lion/ourglass/blob/master/contributing.md) for contribution guidelines.
+See [CONTRIBUTING.md](https://github.com/pleasant-puente/pleasant-puente/blob/master/docs/CONTRIBUTING.md) for contribution guidelines.
