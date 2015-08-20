@@ -1,6 +1,6 @@
 # Pleasant Puente
 
-> your Home Page
+> https://dazzling-inferno-3592.firebaseapp.com
 
 ## Team
 
@@ -20,15 +20,17 @@
 
 ## Usage
 
-> Some usage instructions
+1. Create an account on the login page
+    1. You need to create an account for each member of your household
+2. Using the 'Manage House' menu, have one member create a new house, and have the other members join that house
+3. Now you can start adding tasks, expenses, compliments & concerns which all of your housemates can see
 
 ## Requirements
 
-- Node 0.10.x
-- Redis 2.6.x
-- Postgresql 9.1.x
-- etc
-- etc
+- AngularJS ~1.4.3
+- Firebase ~2.2.9
+- Angular-UI-Router ~0.2.15
+- Angular-Messages ~1.4.3
 
 ## Development
 
@@ -37,14 +39,13 @@
 From within the root directory:
 
 ```sh
-sudo npm install -g bower
-npm install
+(sudo) npm install -g bower
 bower install
 ```
 
 ### Roadmap
 
-View the project roadmap [here](LINK_TO_PROJECT_ISSUES)
+View the project roadmap [here](https://github.com/pleasant-puente/pleasant-puente/issues)
 
 
 ## Contributing
