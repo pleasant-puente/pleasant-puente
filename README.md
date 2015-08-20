@@ -4,9 +4,9 @@
 
 ## Team
 
-  - __Product Owner__: Evan
-  - __Scrum Master__: Femi
-  - __Development Team Members__: Melinda, Thomas
+  - __Product Owner__: [Evan](https://github.com/MetaEvan)
+  - __Scrum Master__: [Femi](https://github.com/femi-saliu)
+  - __Development Team Members__: [Melinda](https://github.com/msarnicki), [Thomas](https://github.com/tgreenhalgh)
 
 ## Table of Contents
 
