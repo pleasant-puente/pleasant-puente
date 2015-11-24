@@ -6,7 +6,7 @@ http://homeharmony.herokuapp.com/
 
   - __Product Owner__: [Evan](https://github.com/MetaEvan)
   - __Scrum Master__: [Femi](https://github.com/femi-saliu)
-  - __Development Team Members__: [Melinda](https://github.com/msarnicki), [Thomas](https://github.com/tgreenhalgh)
+  - __Development Team Members__: [Melinda](https://github.com/melindabernrdo), [Thomas](https://github.com/tgreenhalgh)
 
 
 
