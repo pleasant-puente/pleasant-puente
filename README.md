@@ -1,6 +1,6 @@
 # Home Harmony
 #### An app that effectively manages communication, tasks and expenditures between roommates.
-> https://dazzling-inferno-3592.firebaseapp.com
+http://homeharmony.herokuapp.com/
 
 ## Team
 
